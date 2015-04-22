@@ -38,7 +38,7 @@ Shredder.prototype.create = function () {
   // add shredder image
   var img = document.createElement('img');
   img.className = 'inject-me';
-  img.src = 'images/shredder.svg';
+  img.src = 'images/shredder_2.svg';
   ss.appendChild(img);
 
   // create the garabge list
