@@ -1,3 +1,10 @@
+* {
+  -webkit-transition: .3s;
+     -moz-transition: .3s;
+      -ms-transition: .3s;
+       -o-transition: .3s;
+          transition: .3s;
+}
 body {
   margin:0;
   padding:0;
@@ -24,6 +31,10 @@ ul {
 
 
 /* FILE SHREDDER SVG STYLES */
+#file {}
+.dragging #file {
+  transform: translateY(150px);
+}
 #file-shredder {
   display:block;
   margin:auto;
@@ -45,16 +56,23 @@ ul {
 .rim {
   fill:#b3b3b3;
 }
+.shredder-mask {
+  stroke:none !important;
+  stroke-width:0 !important;
+}
+.shake {
+  opacity:0;
+  stroke:#FFDC00 !important;
+  fill:none;
+}
+.dragging .shake {
+  opacity:1;
+}
 .insert {
   fill:none;
 }
 .button {
   fill:#f6f6f6;
-  -webkit-transition: .3s;
-     -moz-transition: .3s;
-      -ms-transition: .3s;
-       -o-transition: .3s;
-          transition: .3s;
 }
 .button.off {
   fill:#c1272d;
