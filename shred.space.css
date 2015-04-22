@@ -21,3 +21,47 @@ ul {
 .shreddie.shredding {
   background:url(images/loading.gif) left center no-repeat;
 }
+
+
+/* FILE SHREDDER SVG STYLES */
+#file-shredder {
+  display:block;
+  margin:auto;
+  max-width:400px;
+}
+#file-shredder path {
+  stroke-width:5;
+  stroke:#1A1A1A;
+}
+.bucket {
+  fill:#333333;
+}
+.bucket-inner-upper {
+  fill:#333333;
+}
+.bucket-inner {
+  fill:#1A1A1A;
+}
+.rim {
+  fill:#b3b3b3;
+}
+.insert {
+  fill:none;
+}
+.button {
+  fill:#f6f6f6;
+  -webkit-transition: .3s;
+     -moz-transition: .3s;
+      -ms-transition: .3s;
+       -o-transition: .3s;
+          transition: .3s;
+}
+.button.off {
+  fill:#c1272d;
+}
+.dragging .button.on {
+  fill:#39b54a;
+}
+.dragging .button.off {
+  fill:#f6f6f6;
+}

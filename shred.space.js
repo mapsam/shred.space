@@ -35,6 +35,12 @@ Shredder.prototype.create = function () {
   ss.addEventListener('dragleave', ondragleave, false);
   ss.addEventListener('drop', ondrop, false);
 
+  // add shredder image
+  var img = document.createElement('img');
+  img.className = 'inject-me';
+  img.src = 'images/shredder.svg';
+  ss.appendChild(img);
+
   // create the garabge list
   var garbage = document.createElement('ul');
   garbage.id = 'garbage';
@@ -46,6 +52,9 @@ Shredder.prototype.create = function () {
   };
 
   document.body.appendChild(ss);
+
+  var svgs = document.querySelectorAll('img.inject-me');
+  SVGInjector(svgs);
 
   function ondragover(e) {
     e = e || event;
