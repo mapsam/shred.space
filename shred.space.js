@@ -6,7 +6,7 @@ var Shredder = function ( options ) {
   this.name = 
   this.create();
 
-  console.info('Shredder initialized. Suck it.');
+  console.info('Shredder initialized.');
 }
 
 Shredder.prototype.create = function () {
@@ -41,12 +41,15 @@ Shredder.prototype.create = function () {
 
 }
 
-Shredder.prototype.shred = function( files ) {
+Shredder.prototype.shred = function ( files ) {
   var _this = this;
   for (i = 0; i < files.length; i++) {
     (function(file){
       console.log(file);
       _this.files.push(file);
+      _this.postShred(file, A_NUMBER_FOR_THE_STUFFZ)
     })(files[i]);
   }
 }
+
+Shredder.prototype.postShred = function ( file,  )
