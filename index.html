@@ -13,14 +13,24 @@
   |___/|_||_|_|_\___|___/  
 
   -->
+  <script src="svg-injector.min.js"></script>
   <script src="shred.space.js"></script>
   <link href="shred.space.css" rel="stylesheet">
 </head>
 <body>
-  SHRED!
   <script>
   function init() {
-    window.S = new Shredder();
+    window.S = new Shredder({
+      phrases: [
+        'has been shredded beyond recognition.',
+        'is officially no longer part of this universe.',
+        'can no longer call itself a resident of your computer.',
+        'is caput. You can relax.',
+        'slowly fades away.',
+        'is completely FUBAR.',
+        'was deleted as quickly as you can say ______.'
+      ]
+    });
   }
   window.onload = init;
   </script>
